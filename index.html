@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshKart | Fresh Groceries Delivered in Minutes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="navbar glass sticky">
+    <a class="brand" href="index.html">Fresh<span>Kart</span></a>
+    <div class="search-wrap desktop-search">
+      <input class="search-input" type="search" placeholder="Search for vegetables, fruits, snacks..." aria-label="Search products" />
+      <button class="voice-btn" aria-label="Voice search">🎙️</button>
+    </div>
+    <nav class="nav-links">
+      <a href="products.html">Shop</a>
+      <a href="#deals">Deals</a>
+      <a href="#reviews">Reviews</a>
+      <button id="authOpen" class="link-btn">Login</button>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      <a href="#" class="icon-btn" aria-label="Wishlist">♡</a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">🛒 <span id="cartCount" class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">India's Fastest Fresh Delivery</p>
+        <h1>Fresh Groceries Delivered in Minutes</h1>
+        <p class="muted">From farm-fresh vegetables to household essentials, FreshKart helps Indian families shop smarter and save more daily.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="products.html">Shop Now</a>
+          <a class="btn btn-ghost" href="#download">Download App</a>
+        </div>
+      </div>
+      <div class="hero-card glass floaty">
+        <h3>Today’s Top Value Basket</h3>
+        <p>Save up to <strong>35%</strong> on daily essentials.</p>
+        <ul>
+          <li>🥬 Farm Fresh Vegetables</li>
+          <li>🥛 Dairy Essentials</li>
+          <li>🍪 Family Snack Packs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container mobile-search-only">
+      <div class="search-wrap">
+        <input class="search-input" type="search" placeholder="Search groceries..." aria-label="Search products mobile" />
+        <button class="voice-btn" aria-label="Voice search">🎙️</button>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Browse Categories</h2>
+      <div class="category-slider">
+        <a href="products.html" class="chip">🥦 Vegetables</a>
+        <a href="products.html" class="chip">🍎 Fruits</a>
+        <a href="products.html" class="chip">🧀 Dairy</a>
+        <a href="products.html" class="chip">🍟 Snacks</a>
+        <a href="products.html" class="chip">🥤 Beverages</a>
+        <a href="products.html" class="chip">🧴 Household</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-head">
+        <h2>Featured Products</h2>
+        <a href="products.html">View All →</a>
+      </div>
+      <div id="featuredProducts" class="product-grid skeleton-grid"></div>
+    </section>
+
+    <section id="deals" class="container">
+      <div class="deal-banner glass">
+        <div>
+          <p class="eyebrow">Today’s Deals</p>
+          <h3>Flat ₹150 OFF on orders above ₹999</h3>
+          <p>Use coupon code <strong>FRESH150</strong> during checkout.</p>
+        </div>
+        <a class="btn btn-primary" href="products.html">Grab Deals</a>
+      </div>
+    </section>
+
+    <section id="reviews" class="container">
+      <h2>Customer Love</h2>
+      <div class="review-grid">
+        <article class="card review"><p>“Fresh veggies, super fast delivery and good prices every day!”</p><strong>— Priya, Pune</strong></article>
+        <article class="card review"><p>“The app is simple and my monthly grocery bill is lower now.”</p><strong>— Rajesh, Bengaluru</strong></article>
+        <article class="card review"><p>“Best for working families. Reliable and budget friendly.”</p><strong>— Sneha, Mumbai</strong></article>
+      </div>
+    </section>
+
+    <section id="download" class="container app-banner glass">
+      <div>
+        <p class="eyebrow">Get FreshKart App</p>
+        <h3>Track delivery, reorder in one tap, and unlock app-only offers.</h3>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-primary">Google Play</button>
+        <button class="btn btn-ghost">App Store</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html">Fresh<span>Kart</span></a><p class="muted">Smart grocery shopping for modern India.</p></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a></div>
+      <div><h4>Support</h4><a href="#">FAQs</a><a href="#">Contact</a><a href="#">Track Order</a></div>
+      <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refunds</a></div>
+    </div>
+  </footer>
+
+  <dialog id="authModal" class="modal">
+    <form method="dialog" class="modal-content">
+      <h3>Login / Register</h3>
+      <input type="tel" placeholder="Mobile Number" required>
+      <input type="password" placeholder="Password" required>
+      <button class="btn btn-primary" type="submit">Continue</button>
+      <button class="btn btn-ghost" type="button" id="authClose">Cancel</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
