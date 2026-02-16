@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshKart | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <header class="navbar glass sticky">
+    <a class="brand" href="index.html">Fresh<span>Kart</span></a>
+  </header>
+
+  <main class="container checkout-layout">
+    <section class="card">
+      <h1>Checkout</h1>
+      <form id="checkoutForm" class="checkout-form">
+        <h3>Delivery Address</h3>
+        <input required placeholder="Full Name" />
+        <input required placeholder="Phone Number" />
+        <textarea required placeholder="Address"></textarea>
+        <div class="grid-2">
+          <input required placeholder="City" />
+          <input required placeholder="Pincode" />
+        </div>
+        <h3>Payment Method</h3>
+        <label><input type="radio" name="payment" checked /> Cash on Delivery</label>
+        <label><input type="radio" name="payment" /> UPI</label>
+        <label><input type="radio" name="payment" /> Card</label>
+
+        <label>Delivery Time
+          <select>
+            <option>10-20 min</option>
+            <option>20-30 min</option>
+            <option>30-45 min</option>
+          </select>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <aside class="card summary">
+      <h3>Order Summary</h3>
+      <div id="checkoutSummary"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

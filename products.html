@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshKart | Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <header class="navbar glass sticky">
+    <a class="brand" href="index.html">Fresh<span>Kart</span></a>
+    <nav class="nav-links">
+      <a href="products.html">Shop</a>
+      <a href="cart.html">Cart <span id="cartCount" class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="container listing-layout">
+    <aside class="filter-sidebar card">
+      <h3>Filters</h3>
+      <label>Category
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Snacks">Snacks</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Household">Household</option>
+        </select>
+      </label>
+      <label>Price upto ₹<span id="priceValue">500</span>
+        <input id="priceFilter" type="range" min="50" max="500" value="500" />
+      </label>
+      <label>Rating
+        <select id="ratingFilter">
+          <option value="0">All</option>
+          <option value="4">4★ & above</option>
+          <option value="3">3★ & above</option>
+        </select>
+      </label>
+    </aside>
+
+    <section>
+      <div class="section-head">
+        <h1>Fresh Picks</h1>
+        <label>Sort
+          <select id="sortSelect">
+            <option value="popular">Popularity</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+          </select>
+        </label>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
